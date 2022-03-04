@@ -5,7 +5,44 @@
   width: 100%;
 }
 
-.search-contaainer {
-  padding: 4px 0;
-  text-align: center;
+.search-container {
+  padding: 0.7rem 0;
+  display: flex;
+}
+
+.form-container {
+  margin-left: 1.8rem;
+  width: 100vw;
+}
+
+.input-search-meli {
+  border-radius: 3px !important;
+  border-color: $white !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+
+  &::placeholder,
+  &::-webkit-input-placeholder {
+    font-size: 18px !important;
+    color: $description-meli !important;
+  }
+}
+
+.btn-search {
+  background-color: $background-boxes !important;
+  border: 0 !important;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  img {
+    max-height: 18px;
+  }
+}
+
+.logo-mercadolibre {
+  width: auto;
+  height: 37px;
 }

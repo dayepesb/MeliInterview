@@ -5,15 +5,16 @@ import ItemDetail from '../containers/ItemDetail';
 import NotFound from '../containers/NotFound';
 import SearchLayout from '../layouts/SearchLayout';
 import '../styles/global.scss';
+import ROUTES from '../utils/RouteUtil';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<SearchLayout />} exact>
+        <Route path={ROUTES.HOME} element={<SearchLayout />} exact>
           <Route index element={<></>} />
-          <Route exact path='/items' element={<Home />} />
-          <Route exact path='/items/:id' element={<ItemDetail />} />
+          <Route exact path={ROUTES.SEARCH_LIST} element={<Home />} />
+          <Route exact path={ROUTES.ITEM_DETAIL} element={<ItemDetail />} />
           <Route path='*' element={<NotFound />} />
         </Route>
         <Route path='*' element={<NotFound />} />
