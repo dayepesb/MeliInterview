@@ -5,7 +5,7 @@ import {
 import { withTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Outlet, useNavigate } from 'react-router';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Loading from '../containers/Loading';
 import Logo from '../img/logo.png';
 import Search from '../img/search.jpg';
@@ -48,6 +48,12 @@ function SearchLayout(props) {
     }
   };
 
+  const onKeyUp = (event) => {
+    if (event.charCode === 13) {
+      search();
+    }
+  };
+
   return (
     <>
       {
@@ -60,11 +66,13 @@ function SearchLayout(props) {
             <Row>
               <Col />
               <Col xs={10} className='search-container'>
-                <img
-                  src={Logo}
-                  className='logo-mercadolibre'
-                  alt='logo mercadolibre'
-                />
+                <Link to='/'>
+                  <img
+                    src={Logo}
+                    className='logo-mercadolibre'
+                    alt='logo mercadolibre'
+                  />
+                </Link>
                 <Form className='form-container'>
                   <InputGroup>
                     <Form.Control
@@ -74,6 +82,7 @@ function SearchLayout(props) {
                       placeholder={t('search.placeholder')}
                       value={form.search}
                       onChange={handleChange}
+                      onKeyPress={onKeyUp}
                     />
                     <Button className='btn-search' onClick={search}>
                       <img className='' src={Search} alt='buscar' />

@@ -1,21 +1,26 @@
 import React, { useEffect } from 'react';
 import { connect, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import { setItems } from '../actions';
+import { setItems, setLoading } from '../actions';
 import { getItems } from '../api/items';
 import Breadcrumb from './Breadcrumb';
 import ItemList from './ItemList';
 
 const Home = (props) => {
-  const { setItems } = props;
+  const {
+    setItems,
+    setLoading,
+  } = props;
 
   const [searchParams] = useSearchParams();
 
   const items = useSelector((state) => state.items);
 
   useEffect(async () => {
+    setLoading(true);
     const searchItems = await getItems(searchParams.get('search'));
     setItems(searchItems);
+    setLoading(false);
   }, [searchParams]);
 
   return (
@@ -42,6 +47,7 @@ const Home = (props) => {
 
 const mapDispatchToProps = {
   setItems,
+  setLoading,
 };
 
 export default connect(null, mapDispatchToProps)(Home);

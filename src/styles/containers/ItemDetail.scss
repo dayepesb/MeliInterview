@@ -2,6 +2,7 @@
 
 .item-detail-container {
     display: flex;
+    padding-top: $double-space;
 
     .item-detail-image {
 
@@ -14,7 +15,6 @@
     }
     .item-detail-price{
         width: auto;
-        padding-top: $double-space;
         padding-right: $double-space;
 
         .detail-quantity {
