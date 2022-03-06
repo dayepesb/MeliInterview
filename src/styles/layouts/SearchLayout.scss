@@ -1,8 +1,12 @@
-@import '../variables';
+@import '../global.scss';
 
 .header-meli {
   background-color: $prymary-meli;
   width: 100%;
+}
+
+.main-container {
+  padding: 0 0 0.7rem 0;
 }
 
 .search-container {

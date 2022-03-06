@@ -49,3 +49,17 @@ input[type='number']:focus,
   outline: 0px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container-list-items {
+  border-radius: 4px;
+  background-color: #fff;
+}

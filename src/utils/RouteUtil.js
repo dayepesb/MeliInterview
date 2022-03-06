@@ -1,4 +1,3 @@
-
 const ROUTES = {
   HOME: '/',
   SEARCH_LIST: '/items',
@@ -6,4 +5,3 @@ const ROUTES = {
 };
 
 export default ROUTES;
-

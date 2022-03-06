@@ -1,7 +1,7 @@
-const SET_USER = 'SET_USER';
-const ADD_USER = 'ADD_USER';
+const ADD_ITEMS = 'ADD_ITEMS';
+const SET_LOADING = 'SET_LOADING';
 
 export {
-  SET_USER,
-  ADD_USER,
+  ADD_ITEMS,
+  SET_LOADING,
 };

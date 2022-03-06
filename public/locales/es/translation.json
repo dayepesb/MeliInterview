@@ -1,4 +1,9 @@
 {
   "title": "Mercadolibre",
-  "search.placeholder": "Nunca dejes de buscar"
+  "search.placeholder": "Nunca dejes de buscar",
+  "new": "Nuevo",
+  "used": "Usado",
+  "sold.quantity": "Vendidos",
+  "pay": "Comprar",
+  "description.title": "Descripción del producto"
 }

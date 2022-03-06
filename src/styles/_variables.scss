@@ -6,6 +6,31 @@ $description-meli: #999999;
 
 $background-boxes: #EEEEEE;
 
+$background-boxes: #DADADA;
+$light-gray-hover: #DADADA;
+
 $background-color: #EEEEEE;
 
-$white: #FFFFFF
+$white: #FFFFFF;
+
+$blue: #3486FA;
+
+$placeholderColor: $description-meli;
+$simple-space: 16px;
+$double-space: 32px;
+$width-container: 860px;
+$size-thumb: 180px;
+$size-address: 12px;
+$item-price: 24px;
+$item-detailt-img-size: 680px;
+$font-size-quantity-detail: 14px;
+$font-size-price-detail: 46px;
+$font-size-title-description: 28px;
+$font-size-description: 16px;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
