@@ -15,9 +15,9 @@ function App() {
           <Route index element={<div />} />
           <Route exact path={ROUTES.SEARCH_LIST} element={<Home />} />
           <Route exact path={ROUTES.ITEM_DETAIL} element={<ItemDetail />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path='*' element={<NotFound />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
   );
