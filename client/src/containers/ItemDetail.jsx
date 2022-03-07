@@ -28,7 +28,6 @@ const ItemDetail = (props) => {
     setLoading(true);
     const responseDetail = await getDetail(id);
     setDetail(responseDetail.data.item);
-    console.log(responseDetail.data.item);
     const parsePrice = parsePriceItem(responseDetail.data.item.price.amount, responseDetail.data.item.price.decimals);
     setPrice(parsePrice);
     setLoading(false);
